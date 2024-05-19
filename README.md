@@ -17,7 +17,7 @@ This project is a simple web application that performs CRUD (Create, Read, Updat
 
 ## Technologies Used
 
--C#
+- C#
 - HTML
 - CSS
 - JavaScript
