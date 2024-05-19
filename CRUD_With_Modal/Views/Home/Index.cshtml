@@ -1,0 +1,59 @@
+﻿@model Student
+
+<div class="container">
+    <div class="row">
+        <div class="text-primary col-6">
+            <h2>Student Data</h2>
+        </div>
+        <div class="text-end col-6">
+            <button class="btn btn-primary mb-2" id="Addbtn">Add Student</button>
+        </div>
+    </div>
+    <table id="studentTable" class="table table-bordered table-striped table-responsive table-hover text-center">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Roll No</th>
+                <th>Student Name</th>
+                <th>Percentage(%)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<div class="modal" id="StudentModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalTitle"></h5>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="Id" value="0" />
+                <div class="mb-2 pd-2">
+                    <label for="RollNo">Roll No</label>
+                    <input type="text" id="RollNo" class="form-control" placeholder="Student Roll No" />
+                </div>
+                <div class="mb-2 pd-2">
+                    <label for="Name">Name</label>
+                    <input type="text" id="Name" class="form-control" placeholder="Student Name" />
+                </div>
+                <div class="mb-2 pd-2">
+                    <label for="Percentage">Percentage</label>
+                    <input type="text" id="Percentage" class="form-control" placeholder="Student Percentage" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" id="Save" onclick="Add();">Save</button>
+                <button type="submit" class="btn btn-success" id="Update" onclick="Update();" style="display:none">Update</button>
+                <button class="btn btn-danger" data-bs-dismiss="modal" onclick="HideModal();">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/student.js"></script>
+}
